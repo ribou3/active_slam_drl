@@ -1,0 +1,404 @@
+.
+├── active_slam_rl
+│   ├── active_slam_reward_node.py
+│   ├── build
+│   │   └── COLCON_IGNORE
+│   ├── d3qn_agent.py
+│   ├── __init__.py
+│   ├── install
+│   │   ├── COLCON_IGNORE
+│   │   ├── local_setup.bash
+│   │   ├── local_setup.ps1
+│   │   ├── local_setup.sh
+│   │   ├── _local_setup_util_ps1.py
+│   │   ├── _local_setup_util_sh.py
+│   │   ├── local_setup.zsh
+│   │   ├── setup.bash
+│   │   ├── setup.ps1
+│   │   ├── setup.sh
+│   │   └── setup.zsh
+│   ├── log
+│   │   ├── build_2026-01-22_13-43-22
+│   │   │   ├── events.log
+│   │   │   └── logger_all.log
+│   │   ├── build_2026-01-22_13-44-16
+│   │   │   ├── events.log
+│   │   │   └── logger_all.log
+│   │   ├── COLCON_IGNORE
+│   │   ├── latest -> latest_build
+│   │   └── latest_build -> build_2026-01-22_13-44-16
+│   ├── memory.py
+│   ├── __pycache__
+│   │   ├── active_slam_reward_node.cpython-310.pyc
+│   │   ├── d3qn_agent.cpython-310.pyc
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── test_backend.cpython-310.pyc
+│   │   ├── test_config.cpython-310.pyc
+│   │   ├── test_d3qn.cpython-310.pyc
+│   │   ├── test_env.cpython-310.pyc
+│   │   ├── test_saver.cpython-310.pyc
+│   │   ├── turtlebot_env.cpython-310.pyc
+│   │   ├── turtlebot_env_frontier.cpython-310.pyc
+│   │   ├── turtlebot_env_no_slam.cpython-310.pyc
+│   │   └── uncertainty_reward_node.cpython-310.pyc
+│   ├── ros2_test_app.py
+│   ├── ros2_test_gui_modern.py
+│   ├── ros2_test_gui.pydummy
+│   ├── ros2_train_d3qn.py
+│   ├── ros2_train_frontier.py
+│   ├── ros2_train_no_slam.py
+│   ├── test_agent.py
+│   ├── test_backend.py
+│   ├── test_config.py
+│   ├── test_d3qn.py
+│   ├── test_env.py
+│   ├── test_saver.py
+│   ├── training_output_frontier
+│   │   └── 20260124_140852_frontier
+│   │       ├── d3qn_frontier_ep1000.pth
+│   │       ├── d3qn_frontier_ep100.pth
+│   │       ├── d3qn_frontier_ep1020.pth
+│   │       ├── d3qn_frontier_ep1040.pth
+│   │       ├── d3qn_frontier_ep1060.pth
+│   │       ├── d3qn_frontier_ep1080.pth
+│   │       ├── d3qn_frontier_ep1100.pth
+│   │       ├── d3qn_frontier_ep1120.pth
+│   │       ├── d3qn_frontier_ep1140.pth
+│   │       ├── d3qn_frontier_ep1160.pth
+│   │       ├── d3qn_frontier_ep1180.pth
+│   │       ├── d3qn_frontier_ep1200.pth
+│   │       ├── d3qn_frontier_ep120.pth
+│   │       ├── d3qn_frontier_ep1220.pth
+│   │       ├── d3qn_frontier_ep1240.pth
+│   │       ├── d3qn_frontier_ep1260.pth
+│   │       ├── d3qn_frontier_ep1280.pth
+│   │       ├── d3qn_frontier_ep1300.pth
+│   │       ├── d3qn_frontier_ep1320.pth
+│   │       ├── d3qn_frontier_ep1340.pth
+│   │       ├── d3qn_frontier_ep1360.pth
+│   │       ├── d3qn_frontier_ep1380.pth
+│   │       ├── d3qn_frontier_ep1400.pth
+│   │       ├── d3qn_frontier_ep140.pth
+│   │       ├── d3qn_frontier_ep1420.pth
+│   │       ├── d3qn_frontier_ep1440.pth
+│   │       ├── d3qn_frontier_ep1460.pth
+│   │       ├── d3qn_frontier_ep1480.pth
+│   │       ├── d3qn_frontier_ep1500.pth
+│   │       ├── d3qn_frontier_ep1520.pth
+│   │       ├── d3qn_frontier_ep1540.pth
+│   │       ├── d3qn_frontier_ep1560.pth
+│   │       ├── d3qn_frontier_ep1580.pth
+│   │       ├── d3qn_frontier_ep1600.pth
+│   │       ├── d3qn_frontier_ep160.pth
+│   │       ├── d3qn_frontier_ep1620.pth
+│   │       ├── d3qn_frontier_ep1640.pth
+│   │       ├── d3qn_frontier_ep1660.pth
+│   │       ├── d3qn_frontier_ep1680.pth
+│   │       ├── d3qn_frontier_ep1700.pth
+│   │       ├── d3qn_frontier_ep1720.pth
+│   │       ├── d3qn_frontier_ep1740.pth
+│   │       ├── d3qn_frontier_ep1760.pth
+│   │       ├── d3qn_frontier_ep1780.pth
+│   │       ├── d3qn_frontier_ep1800.pth
+│   │       ├── d3qn_frontier_ep180.pth
+│   │       ├── d3qn_frontier_ep1820.pth
+│   │       ├── d3qn_frontier_ep1840.pth
+│   │       ├── d3qn_frontier_ep1860.pth
+│   │       ├── d3qn_frontier_ep1880.pth
+│   │       ├── d3qn_frontier_ep1900.pth
+│   │       ├── d3qn_frontier_ep1920.pth
+│   │       ├── d3qn_frontier_ep1940.pth
+│   │       ├── d3qn_frontier_ep1960.pth
+│   │       ├── d3qn_frontier_ep1980.pth
+│   │       ├── d3qn_frontier_ep2000.pth
+│   │       ├── d3qn_frontier_ep200.pth
+│   │       ├── d3qn_frontier_ep20.pth
+│   │       ├── d3qn_frontier_ep220.pth
+│   │       ├── d3qn_frontier_ep240.pth
+│   │       ├── d3qn_frontier_ep260.pth
+│   │       ├── d3qn_frontier_ep280.pth
+│   │       ├── d3qn_frontier_ep300.pth
+│   │       ├── d3qn_frontier_ep320.pth
+│   │       ├── d3qn_frontier_ep340.pth
+│   │       ├── d3qn_frontier_ep360.pth
+│   │       ├── d3qn_frontier_ep380.pth
+│   │       ├── d3qn_frontier_ep400.pth
+│   │       ├── d3qn_frontier_ep40.pth
+│   │       ├── d3qn_frontier_ep420.pth
+│   │       ├── d3qn_frontier_ep440.pth
+│   │       ├── d3qn_frontier_ep460.pth
+│   │       ├── d3qn_frontier_ep480.pth
+│   │       ├── d3qn_frontier_ep500.pth
+│   │       ├── d3qn_frontier_ep520.pth
+│   │       ├── d3qn_frontier_ep540.pth
+│   │       ├── d3qn_frontier_ep560.pth
+│   │       ├── d3qn_frontier_ep580.pth
+│   │       ├── d3qn_frontier_ep600.pth
+│   │       ├── d3qn_frontier_ep60.pth
+│   │       ├── d3qn_frontier_ep620.pth
+│   │       ├── d3qn_frontier_ep640.pth
+│   │       ├── d3qn_frontier_ep660.pth
+│   │       ├── d3qn_frontier_ep680.pth
+│   │       ├── d3qn_frontier_ep700.pth
+│   │       ├── d3qn_frontier_ep720.pth
+│   │       ├── d3qn_frontier_ep740.pth
+│   │       ├── d3qn_frontier_ep760.pth
+│   │       ├── d3qn_frontier_ep780.pth
+│   │       ├── d3qn_frontier_ep800.pth
+│   │       ├── d3qn_frontier_ep80.pth
+│   │       ├── d3qn_frontier_ep820.pth
+│   │       ├── d3qn_frontier_ep840.pth
+│   │       ├── d3qn_frontier_ep860.pth
+│   │       ├── d3qn_frontier_ep880.pth
+│   │       ├── d3qn_frontier_ep900.pth
+│   │       ├── d3qn_frontier_ep920.pth
+│   │       ├── d3qn_frontier_ep940.pth
+│   │       ├── d3qn_frontier_ep960.pth
+│   │       ├── d3qn_frontier_ep980.pth
+│   │       ├── d3qn_frontier_final.pth
+│   │       ├── reward_breakdown.png
+│   │       └── training_log.csv
+│   ├── training_output_no_slam
+│   │   └── 20260128_030605
+│   │       ├── d3qn_ep100.pth
+│   │       ├── d3qn_ep10.pth
+│   │       ├── d3qn_ep110.pth
+│   │       ├── d3qn_ep120.pth
+│   │       ├── d3qn_ep130.pth
+│   │       ├── d3qn_ep140.pth
+│   │       ├── d3qn_ep150.pth
+│   │       ├── d3qn_ep160.pth
+│   │       ├── d3qn_ep170.pth
+│   │       ├── d3qn_ep180.pth
+│   │       ├── d3qn_ep190.pth
+│   │       ├── d3qn_ep200.pth
+│   │       ├── d3qn_ep20.pth
+│   │       ├── d3qn_ep210.pth
+│   │       ├── d3qn_ep220.pth
+│   │       ├── d3qn_ep230.pth
+│   │       ├── d3qn_ep240.pth
+│   │       ├── d3qn_ep250.pth
+│   │       ├── d3qn_ep260.pth
+│   │       ├── d3qn_ep270.pth
+│   │       ├── d3qn_ep280.pth
+│   │       ├── d3qn_ep290.pth
+│   │       ├── d3qn_ep300.pth
+│   │       ├── d3qn_ep30.pth
+│   │       ├── d3qn_ep310.pth
+│   │       ├── d3qn_ep320.pth
+│   │       ├── d3qn_ep330.pth
+│   │       ├── d3qn_ep340.pth
+│   │       ├── d3qn_ep350.pth
+│   │       ├── d3qn_ep360.pth
+│   │       ├── d3qn_ep370.pth
+│   │       ├── d3qn_ep380.pth
+│   │       ├── d3qn_ep390.pth
+│   │       ├── d3qn_ep400.pth
+│   │       ├── d3qn_ep40.pth
+│   │       ├── d3qn_ep410.pth
+│   │       ├── d3qn_ep420.pth
+│   │       ├── d3qn_ep430.pth
+│   │       ├── d3qn_ep440.pth
+│   │       ├── d3qn_ep450.pth
+│   │       ├── d3qn_ep460.pth
+│   │       ├── d3qn_ep470.pth
+│   │       ├── d3qn_ep480.pth
+│   │       ├── d3qn_ep490.pth
+│   │       ├── d3qn_ep500.pth
+│   │       ├── d3qn_ep50.pth
+│   │       ├── d3qn_ep510.pth
+│   │       ├── d3qn_ep520.pth
+│   │       ├── d3qn_ep530.pth
+│   │       ├── d3qn_ep540.pth
+│   │       ├── d3qn_ep550.pth
+│   │       ├── d3qn_ep560.pth
+│   │       ├── d3qn_ep570.pth
+│   │       ├── d3qn_ep580.pth
+│   │       ├── d3qn_ep590.pth
+│   │       ├── d3qn_ep600.pth
+│   │       ├── d3qn_ep60.pth
+│   │       ├── d3qn_ep610.pth
+│   │       ├── d3qn_ep620.pth
+│   │       ├── d3qn_ep630.pth
+│   │       ├── d3qn_ep640.pth
+│   │       ├── d3qn_ep650.pth
+│   │       ├── d3qn_ep660.pth
+│   │       ├── d3qn_ep670.pth
+│   │       ├── d3qn_ep680.pth
+│   │       ├── d3qn_ep690.pth
+│   │       ├── d3qn_ep700.pth
+│   │       ├── d3qn_ep70.pth
+│   │       ├── d3qn_ep710.pth
+│   │       ├── d3qn_ep720.pth
+│   │       ├── d3qn_ep730.pth
+│   │       ├── d3qn_ep740.pth
+│   │       ├── d3qn_ep750.pth
+│   │       ├── d3qn_ep760.pth
+│   │       ├── d3qn_ep770.pth
+│   │       ├── d3qn_ep780.pth
+│   │       ├── d3qn_ep790.pth
+│   │       ├── d3qn_ep800.pth
+│   │       ├── d3qn_ep80.pth
+│   │       ├── d3qn_ep810.pth
+│   │       ├── d3qn_ep820.pth
+│   │       ├── d3qn_ep830.pth
+│   │       ├── d3qn_ep840.pth
+│   │       ├── d3qn_ep850.pth
+│   │       ├── d3qn_ep90.pth
+│   │       ├── log_data.csv
+│   │       └── training_curve.png
+│   ├── training_output_slam
+│   │   └── 20260126_164625
+│   │       ├── d3qn_ep1000.pth
+│   │       ├── d3qn_ep100.pth
+│   │       ├── d3qn_ep1020.pth
+│   │       ├── d3qn_ep1040.pth
+│   │       ├── d3qn_ep1060.pth
+│   │       ├── d3qn_ep1080.pth
+│   │       ├── d3qn_ep1100.pth
+│   │       ├── d3qn_ep1120.pth
+│   │       ├── d3qn_ep1140.pth
+│   │       ├── d3qn_ep1160.pth
+│   │       ├── d3qn_ep1180.pth
+│   │       ├── d3qn_ep1200.pth
+│   │       ├── d3qn_ep120.pth
+│   │       ├── d3qn_ep1220.pth
+│   │       ├── d3qn_ep1240.pth
+│   │       ├── d3qn_ep1260.pth
+│   │       ├── d3qn_ep1280.pth
+│   │       ├── d3qn_ep1300.pth
+│   │       ├── d3qn_ep1320.pth
+│   │       ├── d3qn_ep1340.pth
+│   │       ├── d3qn_ep1360.pth
+│   │       ├── d3qn_ep1380.pth
+│   │       ├── d3qn_ep1400.pth
+│   │       ├── d3qn_ep140.pth
+│   │       ├── d3qn_ep1420.pth
+│   │       ├── d3qn_ep1440.pth
+│   │       ├── d3qn_ep1460.pth
+│   │       ├── d3qn_ep1480.pth
+│   │       ├── d3qn_ep1500.pth
+│   │       ├── d3qn_ep1520.pth
+│   │       ├── d3qn_ep1540.pth
+│   │       ├── d3qn_ep1560.pth
+│   │       ├── d3qn_ep1580.pth
+│   │       ├── d3qn_ep1600.pth
+│   │       ├── d3qn_ep160.pth
+│   │       ├── d3qn_ep1620.pth
+│   │       ├── d3qn_ep1640.pth
+│   │       ├── d3qn_ep1660.pth
+│   │       ├── d3qn_ep1680.pth
+│   │       ├── d3qn_ep1700.pth
+│   │       ├── d3qn_ep1720.pth
+│   │       ├── d3qn_ep1740.pth
+│   │       ├── d3qn_ep1760.pth
+│   │       ├── d3qn_ep1780.pth
+│   │       ├── d3qn_ep1800.pth
+│   │       ├── d3qn_ep180.pth
+│   │       ├── d3qn_ep1820.pth
+│   │       ├── d3qn_ep1840.pth
+│   │       ├── d3qn_ep1860.pth
+│   │       ├── d3qn_ep1880.pth
+│   │       ├── d3qn_ep1900.pth
+│   │       ├── d3qn_ep1920.pth
+│   │       ├── d3qn_ep1940.pth
+│   │       ├── d3qn_ep1960.pth
+│   │       ├── d3qn_ep1980.pth
+│   │       ├── d3qn_ep2000.pth
+│   │       ├── d3qn_ep200.pth
+│   │       ├── d3qn_ep20.pth
+│   │       ├── d3qn_ep220.pth
+│   │       ├── d3qn_ep240.pth
+│   │       ├── d3qn_ep260.pth
+│   │       ├── d3qn_ep280.pth
+│   │       ├── d3qn_ep300.pth
+│   │       ├── d3qn_ep320.pth
+│   │       ├── d3qn_ep340.pth
+│   │       ├── d3qn_ep360.pth
+│   │       ├── d3qn_ep380.pth
+│   │       ├── d3qn_ep400.pth
+│   │       ├── d3qn_ep40.pth
+│   │       ├── d3qn_ep420.pth
+│   │       ├── d3qn_ep440.pth
+│   │       ├── d3qn_ep460.pth
+│   │       ├── d3qn_ep480.pth
+│   │       ├── d3qn_ep500.pth
+│   │       ├── d3qn_ep520.pth
+│   │       ├── d3qn_ep540.pth
+│   │       ├── d3qn_ep560.pth
+│   │       ├── d3qn_ep580.pth
+│   │       ├── d3qn_ep600.pth
+│   │       ├── d3qn_ep60.pth
+│   │       ├── d3qn_ep620.pth
+│   │       ├── d3qn_ep640.pth
+│   │       ├── d3qn_ep660.pth
+│   │       ├── d3qn_ep680.pth
+│   │       ├── d3qn_ep700.pth
+│   │       ├── d3qn_ep720.pth
+│   │       ├── d3qn_ep740.pth
+│   │       ├── d3qn_ep760.pth
+│   │       ├── d3qn_ep780.pth
+│   │       ├── d3qn_ep800.pth
+│   │       ├── d3qn_ep80.pth
+│   │       ├── d3qn_ep820.pth
+│   │       ├── d3qn_ep840.pth
+│   │       ├── d3qn_ep860.pth
+│   │       ├── d3qn_ep880.pth
+│   │       ├── d3qn_ep900.pth
+│   │       ├── d3qn_ep920.pth
+│   │       ├── d3qn_ep940.pth
+│   │       ├── d3qn_ep960.pth
+│   │       ├── d3qn_ep980.pth
+│   │       ├── d3qn_final.pth
+│   │       ├── reward_graph.png
+│   │       └── training_log.csv
+│   ├── turtlebot_env_frontier.py
+│   ├── turtlebot_env_no_slam.py
+│   ├── turtlebot_env.py
+│   └── uncertainty_reward_node.py
+├── launch
+│   ├── __pycache__
+│   │   └── training_env.launch.cpython-310.pyc
+│   ├── training_env.launch.py
+│   └── training_env_no_gui.launch.py
+├── models
+│   ├── Circuit_ql_1
+│   │   ├── model.config
+│   │   └── model.sdf
+│   ├── Circuit_ql_2
+│   │   ├── model.config
+│   │   └── model.sdf
+│   ├── Circuit_ql_2c
+│   │   ├── model.config
+│   │   └── model.sdf
+│   ├── Maze_ql_1
+│   │   ├── model.config
+│   │   └── model.sdf
+│   ├── Round_ql_1
+│   │   ├── model.config
+│   │   └── model.sdf
+│   └── Target
+│       ├── model.config
+│       └── model.sdf
+├── package.xml
+├── resource
+│   └── active_slam_rl
+├── setup.cfg
+├── setup.py
+├── tree_log.txt
+└── worlds
+    ├── articulated_basic.world
+    ├── circle.world
+    ├── circuit2c.world
+    ├── circuit2.world
+    ├── circuit2.worlddummy[
+    ├── circuit2.world:Zone.Identifier
+    ├── circuit.world
+    ├── empty.world
+    ├── maze.world
+    ├── new_articulated_basic.world
+    ├── round.world
+    ├── scara_basic_obst.world
+    └── scara_basic.world
+
+26 directories, 375 files

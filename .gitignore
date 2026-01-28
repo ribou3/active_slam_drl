@@ -1,0 +1,22 @@
+# ROS2
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS & Dummy
+.DS_Store
+*.pydummy
+*.world:Zone.Identifier
+
+# Large Model Files
+# 100個以上の学習済みモデルを除外するための設定
+training_output_frontier/*/d3qn_frontier_ep*.pth
+training_output_no_slam/*/d3qn_ep*.pth
+training_output_slam/*/d3qn_ep*.pth
+
+# 最終モデルだけは残したい場合、以下を追記（任意）
+!*final.pth
